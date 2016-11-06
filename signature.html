@@ -1,55 +1,101 @@
 <meta charset="UTF-8">
 <style>
-    table {
-        table-layout: fixed;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 11px;
-        color: #212121BB;
-    }
+	table {
+		table-layout: fixed;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 11px;
+		color: #212121BB;
+	}
 
-    td {
-        padding: 0;
-        margin: 0;
-        alignment: left;
-    }
+	td {
+		padding: 0;
+		margin: 0;
+		alignment: left;
+	}
 
-    a {
-        text-decoration: none;
-        color: #477CCC;
-    }
+	a {
+		text-decoration: none;
+		color: #477CCC;
+	}
 
-    .photo {
-        margin-right: 10px;
-        border: none;
-        border-radius: 3px;
-        width: 63px;
-        height: 80px;
-    }
+	.photo {
+		margin-right: 10px;
+		border: none;
+		/*border-radius: 3px;*/
+		width: 63px;
+		height: 80px;
+	}
 
-    .contacts {
-        padding-left: 10px;
-        border-left: dashed 1px;
-    }
+	.contacts {
+		padding-left: 10px;
+		border-left: dashed 1px;
+		vertical-align: bottom;
+	}
 
-    .logo {
-        padding-right: 10px;
-    }
+	.logos {
+		height: 24px;
+	}
+
+	.logos a {
+		padding-right: 10px;
+		height: 24px;
+		width: 24px;
+		display: block;
+		float: left;
+	}
 </style>
 <table>
-    <tbody>
-    <tr>
-        <td>
-            <img class="photo" src="data:image/jpeg;base64,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" alt="Yancharuk Alexander">
-        </td>
-        <td class="contacts">
-            <p>
-                Yancharuk Alexander / Web-developer<br>
-                <a href="mailto:alex@itvault.info">user@email.com</a> / +7 555 333-22-11
-            </p>
-            <p>
-                <a href="https://www.itvault.info">
-                    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAEEfUpiAAAABGdBTUEAALGPC/xhBQAAAAZiS0dE
+	<tbody>
+	<tr>
+		<td>
+			<img class="photo" src="data:image/jpeg;base64,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" alt="Yancharuk Alexander">
+		</td>
+		<td class="contacts">
+			<p>
+				Yancharuk Alexander / Web-developer<br>
+				<a href="mailto:alex@itvault.info">user@email.com</a> / +7 555 333-22-11
+			</p>
+			<p class="logos">
+				<a href="https://www.itvault.info">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAEEfUpiAAAABGdBTUEAALGPC/xhBQAAAAZiS0dE
 AP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAACOpJREFUWMONln9snedVxz/n9XXcXzSJ
 46T+lRv/iu1r5/racbVMbdRKLRsbotX6xwoSW+nEEAK2Qqt2IMqENhB0wFZ+tFv4UW0tTAK0oY6h
 onTVilQoHW3qXDuu7ZvYcVzHuXYa50eTOL7v+3wPf/h16iTO1K909Op9nvc55/s+z/me8xjA7oF+
@@ -90,91 +136,66 @@ R5JOS2HpQ+TCyZnyvEnht5u31bmk4ZV3fSad/+/VnDl2ojxhVdGvzZTnn5CSfscvSuG7M+X5Pdtv
 22pReu1LqjPnmF04WaegT6ZZX/kpivhxY11tm6RmSZOzCyfva6yr/evZhZPflXRA0h3pOT8BEC8v
 39dYV+uS9nniG2YX3vtyGtevaEaNdbXg2NypRa/fvKkB43WgJa3xmTVVUsBb5cUze+prN30j1bYD
 If0mi3M3xp8DTcAfS/rqwplz8WqcufcWr9+O62s3UV48Q33tpqi8eEbbNv7MLWbW5+5fYOXavnnN
-OZeARxbOvr9/6623bDezT2PWbO5/M3/2/aOpPysvnvFVv2vx/yG2HBejeNg1AAAAAElFTkSuQmCC" alt="www" title="www" width="32" height="32">
-                </a>
-                <a href="https://github.com/nafigator/">
-                    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
-NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
-IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
-ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
-cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFu
-Y2VJRD0ieG1wLmlpZDpFNTE3OEEyQTk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RCIgeG1wTU06RG9j
-dW1lbnRJRD0ieG1wLmRpZDpFNTE3OEEyQjk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RCI+IDx4bXBN
-TTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1MTc4QTI4OTlBMDExRTI5
-QTE1QkMxMDQ2QTg5MDREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1MTc4QTI5OTlBMDEx
-RTI5QTE1QkMxMDQ2QTg5MDREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4
-bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+m4QGuQAAAyRJREFUeNrEl21ojWEYx895TDPbMNlB
-K46IUiNmPvHBSUjaqc0H8pF5+aDUKPEBqU2NhRQpX5Rv5jWlDIWlMCv7MMSWsWwmb3tpXub4XXWd
-PHvc9/Gc41nu+nedc7/8r/99PffLdYdDPsvkwsgkTBwsA/PADJCnzX2gHTwBt8Hl7p537/3whn04
-XoDZDcpBlk+9P8AFcAghzRkJwPF4zGGw0Y9QS0mAM2AnQj77FqCzrtcwB1Hk81SYojHK4DyGuQ6m
-hIIrBWB9Xm7ug/6B/nZrBHBegrkFxoVGpnwBMSLR9EcEcC4qb8pP14BWcBcUgewMnF3T34VqhWMF
-kThLJAalwnENOAKiHpJq1FZgI2AT6HZtuxZwR9GidSHtI30jOrbawxlVX78/AbNfhHlomEUJJI89
-O2MqeE79T8/nk8nMBm/dK576hZgmA3cp/R4l9/UeSxiHLVIlNm4nFfT0bxyuIj7LHRTKai+zdJob
-wMKzcZSJb0ePV5PKN+BqAAKE47UlMnERELMM3EdYP/yrd+XYb2mOiYBiQ8OQnoRBlXrl9JZix7D1
-pHTazu4MoyBcnYamqAjIMTR8G4FT8LuhLsexXYYjICBiqhQBvYb6fLZIJCjPypVvaOoVAW2WcasC
-nL2Nq82xHJNSqlCeFcDshaPK0twkAhosjZL31QYw+1rlMpWGMArl23SBsZZO58F2tlJXmjOXS+s4
-WGvpMiBJT/I2PInZ6lIs9/hBsNS1hS6BG0DSqmYEDRlCXQrmy50P1oDRKTSegmNbUsA0zDMwRhPJ
-XeCE3vWLPQMvan6X8AgIa1vcR4AkGZkDR4ejJ1UHpsaVI0g2LInpOsNFUud1rhxSV+fzC9Woz2EZ
-kWQuja7/B+jUrgtIMpy9YCW4n4K41YfzRneW5E1KJTe4B2Zq1Q5EHEtj4U3AfEzR5SVY4l7QYQPJ
-dN2as7RKBF0BPZqqH4VgMAMBL8Byxr7y8zCZiDlnOcEKIPmUpgB5Z2ww5RdOiiRiNajUmWda5IG6
-WbhsyY2fx6m8gLcoJDJFkH219M3We1+cnda93pfycZpIJEL/s/wSYADmOAwAQgdpBAAAAABJRU5E
-rkJggg==" alt="GitHub" title="GitHub" width="32" height="32">
-                </a>
-                <a href="http://stackoverflow.com/users/2648942/alexander-yancharuk">
-                    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
-WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsFFhkEHljCwgAAA9hJREFUWMO9ll+IlFUYxn/fzOza
-6lkSKxcSNrJjZkEXEWzlzWZrGUX/sLK6SAoqgyCyopvgjYi6aK8syMCI6iaUwo1AmiXTJC8q+wel
-dbZIQTMVIc+2O7Mz83XzfPDt4MrO7GwvfHzzzTnvOc953vd535PQQYvmlwLbgcechUOz8Uk6uPkQ
-8CGwBDgD9AP/OAuNc/kVOgXAWRgFpvTZC7znLDSi+eK8MRDNdwE1ZyGN5gvAUuAYkGptcxZemk8G
-BrLNRfVx4HFtXgUsmr8mmi91lAGddjWwF9jlLNwazXc7C1WNbwfWa/q4s+Ci+aKzUJ8zA9F8Safd
-DdSBddH8GNCj8fOchXuBo0AN6Inm9zgL9Wg+6SQDG4FtSrwugbnCWQiasxI4KBAl4FHgfWdhas45
-4Cw0nIV3gEElXCogv0XzGzTnkDYtaXwbcMmcGFAy1ZV4id6LgT+BRUAmubechU3y+RQY0mFPAR6Y
-yPKhVQbuAbr1u6iYjjsL5wP79H8VeCKa/0QgbwMqYqIP2JrPh6SFmF+mmFaBLc7C81okyapdND8M
-PCO3FPgLuEr14aDypAh4Z2FsVgzoFA3ghdz856L5FHgduDSX/ZsV9wxAH3BElfFJ4A9gmbMw1ioD
-CXA5MKJ32uT7OXC/s3BSbK0Afs7lWQLcDpSzWtGSCpyFFPjVWVgJ3ADsyA1PAGuAE9H8CLBGClim
-EycKxZ6O9oJovhfYCjzQNJQCfwN3A18DXwKDzkKlrV4gSqd9R/MLgKqz8KDi/KoyPVPBBcBXwA/A
-OoFqvRdI99cC+3WSj/UcARoKTX7+s8ArkuoUEJ2FJVnNaAdAF3Af8K50nFkD+An4EfhOVH/jLEzK
-72FgWO34jbbuA/++2J8sfPlwGs2/CWw6y/w0p4bs/5PAR1LLZ811/5wARsvlVcCFOun+enFBdfXe
-R1KV24uBVcDVwABwva5cmVVUZLr0APziLFyptQeVGynwLTA1tHZtClAaLZcTfbwG3CHn5cV65VhG
-qWR0HPgi39Oj+RuBO4G7VO3yDO08vGV90v/UjjTXuquqqCfUJafFtZanN02KWRVMZ7pYOgu7tfjT
-ArRcheo6YNeieKSgjTN1VJvXKM2UD71nfi+I/g+A07O8YRf0ToFGU4YVct3yrACmWXfldKb/h9qs
-VQeKtcnvcwzM77W8XZuRgXHXnyHfoHrfiiXAgcmei2rtAkiq3YsZPpUmlbcHdpK02DJSmFjYNzW2
-YiMw2haAozfdfEsFYDNMtk/wSHOTmhWABjA5Wi53MtQN7VWbDYCCHDplqeTXaCUE/5s6/gPe2JfC
-Yr+dBwAAAABJRU5ErkJggg==" alt="StackOverflow" title="StackOverflow" width="32" height="32">
-                </a>
-                <a href="https://hh.ru/resume/0ce6d101ff010d07ce0039ed1f6e516c58586c">
-                    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
-WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsFFiQRGW1ulwAABI1JREFUWMPFl0toXGUUx3/nu/fO
-tJmkjUbbJhmYTk3QFLsTFKp0oZBuXEi1C2kpWIK6EKugKAhCSl0pVhF8FRQqCOlGSwUrarBgaTeC
-Jn1Ii9PRSSdpTdvEed6Ze4+LmclkXsm0hPbAt/nuued855z/eQlNKEYfFgE8CrI+uFY78meJS7gH
-2KKqwyLyCPAAcFf5l+vAeVU9JSLHgYmIJmazwc3M5OfEwVEXlyiXG3QJLShGr0RJ6gU2hBzsMRG2
-ASHao7QqvxQo7hxkOv0XvbKJpDZjNLVK+wGYkqhESWpcwqMBsVMiDANB2qegCMMBsVNxCY9uIqlT
-EpXFOho8EKMfgwHU9igELHEuAuvrH3kL5AMznhYGLBwXpOjjE2WqMQRxwrYHGy1hEggsFaKbJAVc
-T3nQgksREsWFEMToW3B7yXImAWcFlVcMdSxh0qMQqIajD2MRIEav9GtMy24PrIDbW+EtYIlzsV9j
-GqNXLAIYj8IC4MoxFwBVF9UsqhmQ1s5QLZb5su16Yn1cwqNRkupREMkENzOVvxYKiJ2qSvXpemUE
-Z2gQ6V7D1Z3PYqS7qcRVjz9KaM/TqOdxbe9rpcd63rIvcbXY2R+8O2068mdxsMcAbzFwVz3xGKHd
-Owg98yRKa+vsoQFCu3bQuWcnGEFMW9DxHOyxjvxZ7HKF21ZG6u0iFWFbnHCPDWxZvsIJiKB+ChDE
-6gTfb8IlYEwJNygioVJItME2u3y22Kq6XUSWSWIP5/5NdD6/Gz+TIfXJV3iJZBNAKlbvOtaO7ENW
-ryL95RHc38+AmBYA1mHiEh6PS1hrDhs0892P6udyqqp648AHWk833n5XL9Gjsy+9paqqfi6n8+99
-2sA3/9lhjdGtDTpKZ9wAQ0ub77P29RdJffQF/x38HLwiWnDpenUEq6cXsayS+4MBul7eS/rrb5gb
-fR9NpcAr0jWyC6f/vmZhABiyge4lkhzEcPWp50gf+xbI412ZpfudNxDLwlp3DxizgIBrL7zJ/KGP
-AYfihRg9hz8sdaatD5EZOwpY9Rq67XYgmzl2FCOdoKtxJ86V65oB26op2KnDR7AC96JunmLsnyo4
-Qx1Llsfry7ezuWo25PI1mdHQ98rZrK5bfUBrkF83wPn2KuiyM8ytlJLzRlVP33xnXaFqpHrKiMj3
-3CESkeMGmADSQLHmozGIbTX7qzYaxrSSvlhY/ddiWeeEdZD57D7WbBVhoGYOMIbC5J+4v/1B7ocT
-iASrwgoF8uMnyY+fRNNZ/Cv/kj9xitzPJ0upqwoiiOeV73/FS15d/ChV5aeNJA41b8eL60C9Nc3u
-2+Vr1o5n8nMyyHQa2F9JpBo3Nkuh+vt2+arJun+Q6fRMfk7kbzbika9MRZeBDSs8D9an0HREE32l
-kSyoxsMlSlKnJCKeFgcAt8ETK0N+aTIuDFT2Dg/3zo/ld3wxWRAeZQofnwiJYlA6shFN9AEHKjNc
-fZ1YhoqLZswDEU30BaUjGyFRo/y2LacVWct1mXbX8+0i8nB5kKnMEjeAc6p6ulzaJyKamM2U13ML
-R70W6/n/Zo9WzqL4BTsAAAAASUVORK5CYII=" alt="HeadHunter" title="HeadHunter" width="32" height="32">
-                </a>
-            </p>
-        </td>
-    </tr>
-    </tbody>
+OZeARxbOvr9/6623bDezT2PWbO5/M3/2/aOpPysvnvFVv2vx/yG2HBejeNg1AAAAAElFTkSuQmCC" alt="www" title="www" width="24" height="24">
+				</a>
+				<a href="https://github.com/nafigator/">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
+WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsGBw85VfldrQAAAq5JREFUSMed1kuoVlUUB/Dfd/zK
+ble7EJ1zDCyMHg6cJIVOokCwpyMjkqCIEKGJUCOdWRk0KScFNuhBg3CQVJfCFCKigUTBbWDvwCLD
+zjlgaX2Vdb01WSc2u+/G512js9fa67+e/PcZWETqsiowjauwBddjVZh/xCd4C8cxarp2YRzOIAPV
+dK26rCpsww6s8//yGZ7HgaZr2x7jPwHqsho0Xft3XVa3YB/WOz+ZwyNN177fY/0bIMl8G17BBZYm
+f+GBpmsP9JhpBbfibQxxDn9iakLg33EhlmEedzVde0Qo1GV1JV5FFQ6HsDscK1wSg23wUwRfgR/w
+Gp7EDK5DgQ0rpqdnR7+NTg/rshpiO9YG+Dzea7p2FrN1Wa3HFTiJUdyZxuX4vunauUjyWtwWHViL
+7XVZPT6MTHZmJQ/7jwCYm6BNw+y8E88U2BzlpZu1fAkDXp6t/Qw2F9iaXTyOvUsIsDd8U9laYGOm
+PNh07UJdVhMjx0ou4GBm2lhgdab8Kno/cYDk7teZaXUxZjgr+6zOp4LUNx18gVOZ8kZLlxuy86kC
+xzLlprqspoI6Ju2/uqymsCkzHytwOFOuwp5J55Dc2ZPQeS+HB3VZXY1vQvFzcMrFeApP49cgsXM9
+WFS2LEhxJR7FrjHxrylwAq+HYh8eioC78DlewJ1pNfG9BS/ji0XA38CJounas3gOZ/AYbgqiO43L
+cF9UlMtFuAeXjrGdwbNN154tIqN38WIY78e34dxX9GbfmmTwH+OXRUbzUmAapE9cXVaHcDs+xYP4
+Muh31HTtfLY9a+JdnsnA32m69o4+oSJdxzDsD7r9KLj/JNaMybLIzn9gfwredK2+RWmQh3E3jsam
+DPOfgyRA/+Idxb3hK+1KyvupYRZHsAE3x0xy+Q5P4AN8GBXI/yr+ASI3+gJI7kltAAAAAElFTkSu
+QmCC" alt="GitHub" title="GitHub" width="24" height="24">
+				</a>
+				<a href="http://stackoverflow.com/users/2648942/alexander-yancharuk">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
+WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsGBw0lc85jYAAAArZJREFUSMe11U1oXFUUB/DfS9Jq
+w6sKfiCIC+WpWRVra5GIQWRGqisRQaFQXAREWqKUii4vigtFVBBRxA9EkbjSZclEiiCFIqKItkIe
+fhQ/iFpp7ZMYk5lxc0YeYZKZiJ7Nve9yOP9z////OzfzL6JKxQh24UkcyFO5sF7uyJAF1x5diBfR
+xGsB2C9vMECVCnkqValQpSKL4zM4iFXswbP4J29TAHkqe9stmKpScXmeyi4+wwGch/1VKu7pB5Jt
+gvM9+AgLuDtP5ckqFdvxEvbhG9yWp/LboW6w5qoZ8qBmAh9Wqdibp/IcHg3Qq/rpMZTIeSrbeSrn
+cTNO4FK8V6ViBj/gfrQxiafqVGWDhMU2dPBXnspulYqL8RbuiKKv4DHsxws4jek8le8P1KBKxThm
+cQ7PRPfL2BqdPhypRzCDJ3AvjuOmPJVGNyie4Ro8hx14ANfjJ3yPuVhvD11ujSZWcShP5em+FPXo
+if0o9uJwuGg80o7hacxjCm/gMhzJU3lnvU62kYNq/4AqFZMB1AhHZfgyqPoaj2AmT+WpepPZBvRc
+hPOxhBUs5ansVKmYiGJ34QKM4Qs08lQu1otvZNNRPIgfcRTPY7pKxW78HGNiEi+HJmfyVC7Wbz3f
+aoGx2GTRiUazuRLfV+IsrgtxpwP8T3wcTjmKN8PGPpib29LNsi7ajWazq1c0BGqEr2eDkofwaozl
+3diJK2L23IhbeoyOdFZ2vvP5H9u6i8fuw28B/HsdYAfejv1srF18mqfyk/iZVKm4JAB34YYAPTv+
++Hdla+r4tXgdv4RlT9QB2rGu1DTYh86amdQJny/gK7yL7ZB1293IWepRVgdYG1vD28PEr9F531gP
+oBPjd3lA8VGc2ihhbJ3puYyrN/lUrw4DkM23WhPxem0m2vEeDAQYw0n/YYz4n+NvPYH+xoCXYLQA
+AAAASUVORK5CYII=" alt="StackOverflow" title="StackOverflow" width="24" height="24">
+				</a>
+				<a href="https://hh.ru/resume/0ce6d101ff010d07ce0039ed1f6e516c58586c">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBI
+WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsGBwoaiunYmgAAA6FJREFUSMellk1oXFUUx3/n3jeT
+ZDJJplob00nIK9gaNQuzcSmoFEwRNCV0IX40NIt2YXciogRx4ULEvaDERUXEiBYKRYog4kIKklLS
+VhFlpskkNWnTWmYymY/7jov3ZubFSYptD1ze5Z3D/3yfc4WIcmTxKYR3O4xzVfHEDgGTwEFgFNgT
+ia8CC8A5YM6pW0zapA66fBuWhD8G8VmKmHsFMcPAjMDRhswdSIHPgfcDDfL7WNY4pmyxnGyHiIwD
+s0CGu6NbwJSqnvUpVBqeSCxEHSCviPAp90GqTIOeaiiRRlhEzIvAtw2pMICyLcKOvBZNqAanfZZV
+cnYYAucLzAMZrMH0pNFaHS2W2oCkqxPpSKKlDbRa3ylDtxTGMDZnnKsKMANkUMU+9CCZD9+he+oI
+yuZWy1XpOvQsmQ/eIvH4AZTaTh5kgBnnqmI8sUNRtQBgdj9Aevpl0q9PopRBg/AQhqZz/BnSx1/D
+e2w/UIv42qZB4KgndshEdd5yNAhCg0tllABJpZBUCsWFSqrVkF8uAxbT1xuGUd02Opj0oiZqt6Cn
+m9TTh0gdHkc3q2x+/yObP59Hg9DaxMgj9Jw4RmJ0BPfXVUpfn8EtrfzXm4Ne1KFt5PlD9L17EjvQ
+T2J0hK4XnuPG9JtQCT3ofvUwwdo63v592L0PY7L9/PPex+jtYrwwRk2s/bdWY2mD4idfcP3ICTa+
+/I7EE4/S8dSTaBSi2oVLrB9/m/U3ZnB/r5F66XlMT7qZq4j2mJ3KoL60QvGbr6hd+Z3q/EIYts6O
+Jr985gcqv/1K5adfCNZvYtIpMO1wJhpc22hwKHUwXstlbTWY1h3gIdbcqeFWTTQVt+1YaRaXxOba
+XdGCiUZurHxCMEl6LUDPhl9rY3fTlJdkMjzt4+OcB8wBHzXM1FKZ2pU/qM5fAhIAuKsFahcv4xaX
+0dtFahcvE6zeQLBotUb1/AVMXy9aqcRbSoE5+ZMBsWI/E5gCkEQCO5xFS2Xc8gqIwfT1YnbvIrh+
+E6zB7OrDXVtDi0XwPOxAP2IN9cI1qLsG+qxTd6x92CmACy0RE5ugQVQTGh0TS340SsS2Dzvf5UGD
+PJEHCKGgmK15ERt9Teve5Js4OMAUGuR9l8cA+Cyrqp4Nl8X9kSrT4VYLV6fJkSVUUqiAngImovXH
+PazMifg2y5HF+BTIMdhUohqcVhjTcC/r/zOaWYWxcIs1wAfxKWzZyff8bKmrW7Q2qf42z5Z/ASES
+kYa4KJ95AAAAAElFTkSuQmCC" alt="HeadHunter" title="HeadHunter" width="24" height="24">
+				</a>
+			</p>
+		</td>
+	</tr>
+	</tbody>
 </table>
 
