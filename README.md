@@ -1,4 +1,6 @@
 # email-signature
 Cool email signature
 
-![Alt signature example](https://github.com/nafigator/email-signature/raw/master/images/example.jpg)
+[![Signature example][Example src]]
+
+  [Example src]: (https://github.com/nafigator/email-signature/raw/master/images/example.jpg)
