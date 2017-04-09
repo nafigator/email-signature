@@ -23,6 +23,20 @@
         s/https:\/\/t.me\/username/https:\/\/t.me\/your-username/g;
     ' signature.html
 
+## Personal data workflow
+#### Save config changes
+
+    # gpg --output convert.gpg --encrypt --recipient <email> convert.sh
+    gpg -o convert.gpg -e -r <email> convert.sh
+    git commit && git push
+
+#### Load config changes
+
+    git pull
+    # gpg --output convert.sh --decrypt convert.gpg
+    gpg -o convert.sh -d convert.gpg
+
+
   [License img]: https://github.com/nafigator/email-signature/raw/master/images/raw/wtfpl.png
   [License src]: https://tldrlegal.com/license/do-wtf-you-want-to-public-license-v2-(wtfpl-2.0)
   [Example src]: https://github.com/nafigator/email-signature/raw/master/images/example.png
