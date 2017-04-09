@@ -24,13 +24,13 @@
     ' signature.html
 
 ## Personal data workflow
-#### Save config changes
+#### Save converter changes
 
     # gpg --output convert.gpg --encrypt --recipient <email> convert.sh
     gpg -o convert.gpg -e -r <email> convert.sh
     git commit && git push
 
-#### Load config changes
+#### Load converter changes
 
     git pull
     # gpg --output convert.sh --decrypt convert.gpg
