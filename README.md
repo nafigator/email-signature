@@ -1,4 +1,4 @@
-# Email-signature [![License][License img]][License src]
+# Email-signature
 
 ![Signature example][Example src]
 
@@ -34,6 +34,9 @@
     git pull
     # gpg --output convert.sh --decrypt convert.gpg
     gpg -o convert.sh -d convert.gpg
+
+___
+[![License][License img]][License src]
 
 
   [License img]: https://github.com/nafigator/email-signature/raw/master/images/raw/wtfpl.png
