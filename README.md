@@ -1,6 +1,6 @@
 # Email-signature
 
-[![Signature example][Signature img]]
+![Signature example][Signature img]
 
 ## Minification
 
