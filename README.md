@@ -1,5 +1,4 @@
-# Email-signature
-[![License][License img]][License src]
+# Email-signature [![License][License img]][License src]
 
 ![Signature example][Example src]
 
