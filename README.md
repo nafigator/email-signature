@@ -1,6 +1,6 @@
 # Email-signature
 
-[![Signature example][Signature img]]
+![Signature example][Signature img]
 
 ## Minification
 
@@ -37,7 +37,6 @@
 
 ___
 [![License][License img]][License src]
-
 
   [License img]: https://github.com/nafigator/email-signature/raw/master/images/raw/wtfpl.png
   [License src]: https://tldrlegal.com/license/do-wtf-you-want-to-public-license-v2-(wtfpl-2.0)
