@@ -4,8 +4,7 @@
 
 ## Minification
 
-    sed -i 's/^[ \t]*//g; s/[ \t]*$//g;' signature.html
-    sed -i ':a;N;$!ba;s/\n/ /g' signature.html
+    perl -p -e 's/^[ \t]*//g;s/[ \t]*$//g;s/\n//g;s/>\s*</></g;s/: /:/g;s/; /;/g' signature.html > minified.html
 
 ## Customization
 
@@ -20,7 +19,7 @@
         s/https:\/\/hh.ru\/resume\/11111111111111111111111111111111111111/https:\/\/hh.ru\/resume\/222222222222222222222222222222222222222/g;
         s/skype:+75553332211?call/skype:+73332221100?call/g;
         s/https:\/\/t.me\/username/https:\/\/t.me\/your-username/g;
-    ' signature.html
+    ' minified.html
 
 ## Personal data workflow
 #### Save converter changes
