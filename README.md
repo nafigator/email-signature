@@ -40,4 +40,4 @@ ___
 
   [License img]: https://github.com/nafigator/email-signature/raw/master/images/raw/wtfpl.png
   [License src]: https://tldrlegal.com/license/do-wtf-you-want-to-public-license-v2-(wtfpl-2.0)
-  [Signature img]: raw/master/images/example.png
+  [Signature img]: https://github.com/nafigator/email-signature/raw/master/images/example.png
