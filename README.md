@@ -1,4 +1,5 @@
 # Email-signature
+[![License][License img]][License src]
 
 ![Signature example][Example src]
 
@@ -22,4 +23,6 @@
         s/https:\/\/t.me/username/https:\/\/t.me/your-username/g;
     ' signature.html
 
+  [License img]: https://github.com/nafigator/email-signature/raw/master/images/raw/wtfpl.png
+  [License src]: https://tldrlegal.com/license/do-wtf-you-want-to-public-license-v2-(wtfpl-2.0)
   [Example src]: https://github.com/nafigator/email-signature/raw/master/images/example.png
